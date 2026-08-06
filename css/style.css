@@ -227,7 +227,6 @@ section[id] { scroll-margin-top: 92px; }
 .has-dropdown.open .dropdown { display: block; }
 .dropdown li a { display: block; width: 100%; font-weight: 500; padding: 10px 14px; font-size: 14.5px; border-radius: 8px; }
 .dropdown li a:hover { background: var(--cyan-soft); color: var(--cyan); }
-.nav-cta { margin-top: 22px; justify-content: center; }
 
 /* ===== Hero ===== */
 .hero {
@@ -730,7 +729,6 @@ section[id] { scroll-margin-top: 92px; }
   }
   .has-dropdown:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(6px); }
   .dropdown li a { padding: 9px 14px; font-size: 14px; }
-  .nav-cta { margin: 0 0 0 10px; }
 
   .hero { padding: clamp(100px, 11vw, 148px) 0 clamp(96px, 11vw, 140px); }
   .hero-trust { gap: 14px 32px; }
