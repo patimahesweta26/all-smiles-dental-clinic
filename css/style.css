@@ -655,9 +655,9 @@ section[id] { scroll-margin-top: 92px; }
 
 /* ===== Footer ===== */
 .footer { background: var(--navy); color: rgba(255, 255, 255, .72); }
-.footer-inner { display: grid; grid-template-columns: 1fr; gap: 38px; padding: 60px 0 44px; }
-.footer-brand img { height: 52px; width: auto; margin-bottom: 16px; }
-.footer-brand p { color: rgba(255, 255, 255, .68); font-size: 14px; max-width: 34ch; margin-bottom: 20px; }
+.footer-inner { display: grid; grid-template-columns: 1fr; gap: 48px; padding: 76px 0 60px; }
+.footer-brand img { height: 52px; width: auto; margin-bottom: 20px; }
+.footer-brand p { color: rgba(255, 255, 255, .68); font-size: 14px; max-width: 34ch; margin-bottom: 28px; }
 .footer-social { display: flex; gap: 10px; }
 .footer-social a {
   width: 40px; height: 40px; border-radius: 12px;
@@ -666,11 +666,11 @@ section[id] { scroll-margin-top: 92px; }
   transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease);
 }
 .footer-social a:hover { background: var(--cyan); border-color: var(--cyan); color: #fff; transform: translateY(-3px); }
-.footer-col h4 { color: #fff; font-size: 16px; margin-bottom: 16px; }
-.footer-col ul { display: grid; gap: 11px; font-size: 14px; }
+.footer-col h4 { color: #fff; font-size: 16px; margin-bottom: 22px; }
+.footer-col ul { display: grid; gap: 13px; font-size: 14px; }
 .footer-col ul a { color: rgba(255, 255, 255, .72); transition: color .2s; }
 .footer-col ul a:hover { color: var(--cyan); }
-.footer-bottom { border-top: 1px solid rgba(255, 255, 255, .12); padding: 20px 0; }
+.footer-bottom { border-top: 1px solid rgba(255, 255, 255, .12); padding: 28px 0; }
 .footer-bottom p { font-size: 13px; color: rgba(255, 255, 255, .55); text-align: center; }
 
 /* ===== Floating actions ===== */
@@ -750,7 +750,7 @@ section[id] { scroll-margin-top: 92px; }
 
   .gallery-masonry { column-count: 3; column-gap: 16px; }
 
-  .footer-inner { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 44px; }
+  .footer-inner { grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 48px; }
 }
 
 /* ===== Wide desktop ===== */
