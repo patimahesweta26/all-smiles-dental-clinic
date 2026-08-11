@@ -411,10 +411,11 @@ section[id] { scroll-margin-top: 92px; }
 }
 .doctor-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .doctor-card img { width: 100%; aspect-ratio: 1 / 1.05; object-fit: cover; }
-.doctor-card figcaption { padding: 18px 20px 22px; border-top: 3px solid transparent; text-align: center; transition: border-color .25s var(--ease); }
+.doctor-card figcaption { padding: 18px 20px 24px; border-top: 3px solid transparent; text-align: left; transition: border-color .25s var(--ease); }
 .doctor-card:hover figcaption { border-top-color: var(--cyan); }
-.doctor-card h3 { font-size: 17px; margin-bottom: 2px; }
-.doctor-card figcaption span { font-size: 13.5px; font-weight: 600; color: var(--cyan-deep); }
+.doctor-card h3 { font-size: 18px; margin-bottom: 2px; }
+.doctor-card figcaption span { display: block; font-size: 13px; font-weight: 700; color: var(--cyan-deep); margin-bottom: 12px; }
+.doctor-bio { font-size: 13.5px; line-height: 1.6; color: var(--muted); }
 
 /* ===== Doctors carousel ===== */
 .doctors-carousel { position: relative; max-width: 380px; margin: 0 auto; }
@@ -542,6 +543,53 @@ section[id] { scroll-margin-top: 92px; }
 .sm-panel ul { display: grid; gap: 12px; margin-bottom: 28px; }
 .sm-panel li { display: flex; gap: 11px; align-items: flex-start; color: var(--ink); font-size: 14.5px; font-weight: 600; }
 .sm-panel li i { color: var(--cyan); font-size: 21px; flex: none; margin-top: 1px; }
+
+/* ===== Treatments detail ===== */
+.treatments { padding: 76px 0; background: var(--bg); }
+.tx-blocks { display: grid; gap: 22px; }
+.tx-block {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius-lg); padding: 34px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+}
+.tx-block:hover { border-color: var(--cyan); box-shadow: var(--shadow-md); }
+.tx-head { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
+.tx-icon {
+  flex: none; width: 54px; height: 54px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--cyan-soft); color: var(--cyan-deep); font-size: 28px;
+}
+.tx-head h3 { font-size: clamp(1.35rem, 2.4vw, 1.6rem); }
+.tx-tagline {
+  font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--cyan); margin-top: 4px;
+}
+.tx-block > p { font-size: 15px; margin-bottom: 14px; max-width: 78ch; }
+.tx-block > p strong { color: var(--ink); }
+.tx-sub {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 15.5px; font-weight: 700; color: var(--ink);
+  margin: 26px 0 16px;
+}
+.tx-sub::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.tx-list { display: grid; grid-template-columns: 1fr; gap: 11px; margin-bottom: 18px; }
+.tx-list li { display: flex; gap: 11px; align-items: flex-start; color: var(--ink); font-size: 14.5px; font-weight: 500; }
+.tx-list li strong { color: var(--ink); font-weight: 700; }
+.tx-list li i { color: var(--cyan); font-size: 20px; flex: none; margin-top: 2px; }
+.tx-process {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  background: var(--cyan-softer); border: 1px solid var(--line);
+  border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 22px;
+}
+.tx-process span { font-size: 13px; font-weight: 700; color: var(--ink); }
+.tx-process i { color: var(--cyan); font-size: 14px; }
+.tx-close {
+  display: block; margin-top: 22px; padding-top: 18px;
+  border-top: 1px dashed var(--line-strong);
+  font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--cyan-deep);
+}
 
 /* ===== Testimonials ===== */
 .testimonials { padding: 76px 0; background: var(--bg-soft); }
@@ -694,10 +742,12 @@ section[id] { scroll-margin-top: 92px; }
 @media (min-width: 640px) {
   .container { padding: 0 24px; }
   .topbar-meta span { display: inline-flex; align-items: center; gap: 7px; }
-  .why, .services, .about, .doctors, .gallery, .testimonials, .faq, .contact { padding: 92px 0; }
+  .why, .services, .treatments, .about, .doctors, .gallery, .testimonials, .faq, .contact { padding: 92px 0; }
   .bento { grid-template-columns: repeat(2, 1fr); gap: 18px; }
   .tile-feature { grid-column: span 2; }
   .doctors-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; max-width: none; }
+  .tx-list { grid-template-columns: repeat(2, 1fr); }
+  .tx-block { padding: 38px 34px; }
   .gallery-masonry { column-count: 2; column-gap: 14px; }
   .stats-inner { grid-template-columns: repeat(4, 1fr); gap: 26px; }
   .why-list { grid-template-columns: repeat(2, 1fr); }
