@@ -326,58 +326,6 @@ section[id] { scroll-margin-top: 92px; }
 .why-list p { font-size: 14.5px; max-width: 52ch; padding-left: 48px; }
 .why-icon { display: none; }
 
-/* ===== Services (bento) ===== */
-.services { padding: 76px 0; background: var(--bg-soft); }
-.bento { display: grid; grid-template-columns: 1fr; gap: 16px; }
-
-.tile {
-  display: flex; flex-direction: column; align-items: flex-start;
-  padding: 26px; border-radius: var(--radius-lg);
-  background: var(--surface); border: 1px solid rgba(7, 173, 224, .3);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
-  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
-}
-.tile:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--cyan); }
-.tile-icon {
-  width: 52px; height: 52px; border-radius: 14px; margin-bottom: 20px;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--cyan-soft); color: var(--cyan-deep); font-size: 27px;
-  transition: background-color .25s var(--ease), color .25s var(--ease);
-}
-.tile:hover .tile-icon { background: var(--cyan); color: #fff; }
-.tile h3 { font-size: 18.5px; margin-bottom: 8px; }
-.tile p { font-size: 14px; }
-.tile-hint { display: inline-flex; align-items: center; gap: 7px; margin-top: 14px; font-weight: 700; color: var(--cyan-deep); font-size: 13.5px; }
-.tile-hint i { transition: transform .25s var(--ease); }
-.tile:hover .tile-hint i { transform: translateX(4px); }
-.tile-hint--light { color: #fff; }
-
-.tile-feature {
-  grid-column: span 1;
-  background: linear-gradient(140deg, #0193c5, #012f6b);
-  border: none; justify-content: flex-end;
-  box-shadow: 0 18px 40px rgba(1, 47, 107, .3);
-}
-.tile-feature .tile-icon { background: rgba(255, 255, 255, .16); color: #fff; }
-.tile-feature:hover .tile-icon { background: var(--gold); color: var(--navy); }
-.tile-feature h3 { color: #fff; font-size: 26px; }
-.tile-feature p { color: rgba(255, 255, 255, .82); font-size: 15px; max-width: 46ch; }
-.tile-feature .tile-body { display: flex; flex-direction: column; align-items: flex-start; margin-top: auto; }
-.tile-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-weight: 700; color: #fff; font-size: 14.5px; }
-.tile-link i { transition: transform .25s var(--ease); }
-.tile-feature:hover .tile-link i { transform: translateX(4px); }
-
-.tile-accent { background: var(--cyan-soft); border-color: transparent; }
-.tile-accent .tile-icon { background: rgba(255, 255, 255, .8); color: var(--cyan-deep); }
-.tile-accent:hover { border-color: var(--cyan); }
-
-.tile-dark { background: var(--navy); border: none; }
-.tile-dark .tile-icon { background: rgba(255, 255, 255, .14); color: #fff; }
-.tile-dark:hover .tile-icon { background: var(--cyan); color: #fff; }
-.tile-dark h3 { color: #fff; }
-.tile-dark p { color: rgba(255, 255, 255, .74); }
-.tile-dark:hover { border: none; }
-
 /* ===== About ===== */
 .about { padding: 76px 0; background: var(--bg); }
 .about-media { position: relative; max-width: 440px; justify-self: center; }
@@ -705,9 +653,7 @@ section[id] { scroll-margin-top: 92px; }
 @media (min-width: 640px) {
   .container { padding: 0 24px; }
   .topbar-meta span { display: inline-flex; align-items: center; gap: 7px; }
-  .why, .services, .treatments, .about, .doctors, .gallery, .testimonials, .faq, .contact { padding: 92px 0; }
-  .bento { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-  .tile-feature { grid-column: span 2; }
+  .why, .treatments, .about, .doctors, .gallery, .testimonials, .faq, .contact { padding: 92px 0; }
   .doctors-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; max-width: none; }
   .tx-list { grid-template-columns: repeat(2, 1fr); }
   .tx-block { padding: 38px 34px; }
@@ -751,9 +697,6 @@ section[id] { scroll-margin-top: 92px; }
   .why-lead { position: sticky; top: 110px; align-self: start; }
   .faq-inner { grid-template-columns: .8fr 1.2fr; align-items: start; }
   .faq-lead { position: sticky; top: 110px; align-self: start; }
-
-  .bento { grid-template-columns: repeat(3, 1fr); }
-  .tile { padding: 28px; }
 
   .about-media { max-width: 440px; justify-self: center; }
   .contact-inner { align-items: start; }
