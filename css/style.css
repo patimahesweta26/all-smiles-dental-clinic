@@ -333,13 +333,6 @@ section[id] { scroll-margin-top: 92px; }
 .about-media .dc-slide { box-shadow: none; border: none; border-radius: 0; }
 .about-media .dc-prev { left: 14px; }
 .about-media .dc-next { right: 14px; }
-.about-badge {
-  position: absolute; bottom: -24px; right: 26px;
-  background: var(--cyan); color: #fff;
-  border-radius: 12px; padding: 20px 28px; text-align: center; box-shadow: var(--shadow-md);
-}
-.about-badge strong { display: block; font-family: var(--font-display); font-size: 30px; line-height: 1; margin-bottom: 3px; }
-.about-badge span { font-size: 12.5px; font-weight: 700; }
 
 .about-copy h2 { font-size: clamp(2rem, 3.4vw, 2.7rem); margin: 4px 0 18px; }
 .about-copy > p { margin-bottom: 18px; }
