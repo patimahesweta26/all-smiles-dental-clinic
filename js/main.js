@@ -261,11 +261,31 @@
   var form = document.getElementById("appointmentForm");
   var note = document.getElementById("formNote");
 
+  var nameInput = document.getElementById("nameInput");
+  var phoneInput = document.getElementById("phoneInput");
+  var emailInput = document.getElementById("emailInput");
+
+  // Name: letters and spaces only
+  nameInput.addEventListener("input", function () {
+    this.value = this.value.replace(/[^A-Za-z ]/g, "");
+  });
+
+  // Phone: digits only, max 10
+  phoneInput.addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9]/g, "").slice(0, 10);
+  });
+
+  // Email: letters, numbers and special characters (standard email format)
+  emailInput.addEventListener("input", function () {
+    this.value = this.value.replace(/\s/g, "");
+  });
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    var name = form.elements["name"].value.trim();
-    var phone = form.elements["phone"].value.trim();
+    var name = nameInput.value.trim();
+    var phone = phoneInput.value.trim();
+    var email = emailInput.value.trim();
     var service = form.elements["service"].value;
     var date = form.elements["date"].value;
     var time = form.elements["time"].value;
@@ -273,6 +293,27 @@
     if (!name || !phone || !service || !date || !time) {
       note.className = "form-note error";
       note.textContent = "Please fill in all the required fields.";
+      return;
+    }
+
+    if (!/^[A-Za-z]+( [A-Za-z]+)*$/.test(name)) {
+      note.className = "form-note error";
+      note.textContent = "Name should contain letters only.";
+      nameInput.focus();
+      return;
+    }
+
+    if (!/^[0-9]{10}$/.test(phone)) {
+      note.className = "form-note error";
+      note.textContent = "Phone number must be exactly 10 digits.";
+      phoneInput.focus();
+      return;
+    }
+
+    if (email && !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
+      note.className = "form-note error";
+      note.textContent = "Please enter a valid email address.";
+      emailInput.focus();
       return;
     }
 
@@ -284,6 +325,7 @@
       "Phone: " +
       phone +
       "%0A" +
+      (email ? "Email: " + email + "%0A" : "") +
       "Service: " +
       service +
       "%0A" +

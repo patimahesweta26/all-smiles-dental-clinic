@@ -677,17 +677,17 @@
             <div class="form-row">
               <label>
                 <span>Full name</span>
-                <input type="text" name="name" placeholder="Your name" required />
+                <input type="text" name="name" id="nameInput" placeholder="Your name" autocomplete="name" maxlength="50" pattern="[A-Za-z ]+" required />
               </label>
               <label>
                 <span>Phone number</span>
-                <input type="tel" name="phone" placeholder="Your number" required />
+                <input type="tel" name="phone" id="phoneInput" placeholder="Your number" autocomplete="tel" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" required />
               </label>
             </div>
             <div class="form-row">
               <label>
                 <span>Email address</span>
-                <input type="email" name="email" placeholder="you@example.com" />
+                <input type="email" name="email" id="emailInput" placeholder="you@example.com" autocomplete="email" maxlength="100" />
               </label>
               <label>
                 <span>Service</span>
